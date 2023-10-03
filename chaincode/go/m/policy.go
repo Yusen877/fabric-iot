@@ -28,7 +28,7 @@ type AO struct {
 type AE struct {
 	CreatedTime int64  `json:"createdTime"`
 	EndTime     int64  `json:"endTime"`
-	AllowedIP   string `json:"allowedIP"`
+        AllowedUserID map[string]bool  `json:"allowedUserID"`
 }
 
 func (p *Policy) ToBytes() []byte {
